@@ -21,10 +21,10 @@ var cookieParser = require('cookie-parser');
 
 var client_id = "979b930dc9de4a7f9979d576c7fc94ea"; // Your client id
 var client_secret = "66b3e7c0e97d4e9d86dfbd3525b07cee"; // Your secret
-var redirect_uri =  'http://localhost:8888/callback/';
+var redirect_uri =  'https://vercel.com/matthewcurtis4/spoti-stat-login/8hmgHVa4abH7pn6nDPwWwENUXUUd/callback/';
 //var redirect_uri =  'http://matthewcurtis4.github.io/SpotiStat/express/callback/';
 
-var frontend_redirect = 'http://localhost:3000/InfoPage';
+var frontend_redirect = 'https://spoti-stat-v1-f2rzwyjyc-matthewcurtis4.vercel.app//InfoPage';
 
 
 
