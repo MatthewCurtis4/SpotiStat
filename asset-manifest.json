@@ -1,25 +1,13 @@
 {
   "files": {
-    "main.css": "/myapp/static/css/main.a3581f88.chunk.css",
-    "main.js": "/myapp/static/js/main.f5e95091.chunk.js",
-    "main.js.map": "/myapp/static/js/main.f5e95091.chunk.js.map",
-    "runtime-main.js": "/myapp/static/js/runtime-main.5f0af923.js",
-    "runtime-main.js.map": "/myapp/static/js/runtime-main.5f0af923.js.map",
-    "static/css/2.30c2d978.chunk.css": "/myapp/static/css/2.30c2d978.chunk.css",
-    "static/js/2.575bfe33.chunk.js": "/myapp/static/js/2.575bfe33.chunk.js",
-    "static/js/2.575bfe33.chunk.js.map": "/myapp/static/js/2.575bfe33.chunk.js.map",
-    "index.html": "/myapp/index.html",
-    "precache-manifest.9d968edde0bf141dc1619f8131005ea3.js": "/myapp/precache-manifest.9d968edde0bf141dc1619f8131005ea3.js",
-    "service-worker.js": "/myapp/service-worker.js",
-    "static/css/2.30c2d978.chunk.css.map": "/myapp/static/css/2.30c2d978.chunk.css.map",
-    "static/css/main.a3581f88.chunk.css.map": "/myapp/static/css/main.a3581f88.chunk.css.map",
-    "static/js/2.575bfe33.chunk.js.LICENSE.txt": "/myapp/static/js/2.575bfe33.chunk.js.LICENSE.txt"
+    "main.css": "/SpotiStat/client/static/css/main.df3a576b.css",
+    "main.js": "/SpotiStat/client/static/js/main.25816b27.js",
+    "index.html": "/SpotiStat/client/index.html",
+    "main.df3a576b.css.map": "/SpotiStat/client/static/css/main.df3a576b.css.map",
+    "main.25816b27.js.map": "/SpotiStat/client/static/js/main.25816b27.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.5f0af923.js",
-    "static/css/2.30c2d978.chunk.css",
-    "static/js/2.575bfe33.chunk.js",
-    "static/css/main.a3581f88.chunk.css",
-    "static/js/main.f5e95091.chunk.js"
+    "static/css/main.df3a576b.css",
+    "static/js/main.25816b27.js"
   ]
 }
