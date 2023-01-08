@@ -14,10 +14,20 @@ var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-var client_id = process.env.SPOTIFY_CLIENT_ID; // Your client id
-var client_secret = process.env.SPOTIFY_CLIENT_SECRET; // Your secret
-var redirect_uri = process.env.REDIRECT_URI || 'http://localhost:8888/callback/';
-var frontend_redirect = process.env.REDIRECT_URI || 'http://localhost:3000/InfoPage';
+//var client_id = process.env.SPOTIFY_CLIENT_ID; // Your client id
+//var client_secret = process.env.SPOTIFY_CLIENT_SECRET; // Your secret
+//var redirect_uri = process.env.REDIRECT_URI || 'http://localhost:8888/callback/';
+//var frontend_redirect = process.env.REDIRECT_URI || 'http://localhost:3000/InfoPage';
+
+var client_id = "979b930dc9de4a7f9979d576c7fc94ea"; // Your client id
+var client_secret = "66b3e7c0e97d4e9d86dfbd3525b07cee"; // Your secret
+var redirect_uri =  'http://localhost:8888/callback/';
+//var redirect_uri =  'http://localhost:8888/callback';
+
+var frontend_redirect = 'http://localhost:3000/InfoPage';
+
+
+
 //var redirect_uri = process.env.REDIRECT_URI || 'https://shielded-forest-06718.herokuapp.com/callback/';
 //var frontend_redirect = process.env.REDIRECT_URI || 'https://quiet-earth-27756.herokuapp.com/InfoPage';
 
