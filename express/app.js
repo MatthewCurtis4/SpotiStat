@@ -27,8 +27,8 @@ var client_secret = process.env.CLIENT_SC; // Your secret
 
 
 
-var port = process.env.PORT || 'http://localhost:8888/';
-var redirect_uri = process.env.REDIRECT_URI || 'http://localhost:8888/callback/'; // Your redirect uri
+var port = process.env.PORT || 'https://spoti-stat-login.vercel.app/';
+var redirect_uri = process.env.REDIRECT_URI || 'https://spoti-stat-login.vercel.app/callback/'; // Your redirect uri
 var frontend_redirect = process.env.PORT_FE || 'https://spoti-stat-v1.vercel.app/InfoPage';
 
 
@@ -165,4 +165,4 @@ app.get('/refresh_token', function(req, res) {
 });
 
 console.log('Listening on 8888');
-app.listen(process.env.PORT || 8888);
+app.listen(port);
