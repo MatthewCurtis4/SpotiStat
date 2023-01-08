@@ -1,5 +1,6 @@
 {
-  "homepage": "http://matthewcurtis4.github.io/SpotiStat/express",
+    "homepage": "http://matthewcurtis4.github.io/SpotiStat/client",
+
   "name": "authtest",
   "version": "1.0.0",
   "description": "Spotify Auth Server",
@@ -25,7 +26,7 @@
     "test": "node app.js",
     "start": "node app.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build"
   },
   "engines": {
     "node": "12.18.3",

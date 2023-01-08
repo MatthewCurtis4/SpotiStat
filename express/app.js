@@ -21,8 +21,8 @@ var cookieParser = require('cookie-parser');
 
 var client_id = "979b930dc9de4a7f9979d576c7fc94ea"; // Your client id
 var client_secret = "66b3e7c0e97d4e9d86dfbd3525b07cee"; // Your secret
-//var redirect_uri =  'http://localhost:8888/callback/';
-var redirect_uri =  'http://matthewcurtis4.github.io/SpotiStat/express/callback/';
+var redirect_uri =  'http://localhost:8888/callback/';
+//var redirect_uri =  'http://matthewcurtis4.github.io/SpotiStat/express/callback/';
 
 var frontend_redirect = 'http://localhost:3000/InfoPage';
 
