@@ -6,7 +6,8 @@
  * For more information, read
  * https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
  */
-//To run dont click run type in node authorization_code/app.js
+
+
 require('dotenv').config();
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
@@ -19,14 +20,20 @@ var cookieParser = require('cookie-parser');
 //var redirect_uri = process.env.REDIRECT_URI || 'http://localhost:8888/callback/';
 //var frontend_redirect = process.env.REDIRECT_URI || 'http://localhost:3000/InfoPage';
 
-var client_id = "979b930dc9de4a7f9979d576c7fc94ea"; // Your client id
-var client_secret = "66b3e7c0e97d4e9d86dfbd3525b07cee"; // Your secret
-var redirect_uri =  'https://vercel.com/matthewcurtis4/spoti-stat-login/8hmgHVa4abH7pn6nDPwWwENUXUUd/callback/';
+var client_id = process.env.CLIENT_ID; // Your client id
+var client_secret = process.env.CLIENT_SC; // Your secret
+//var redirect_uri =  'https://spoti-stat-login.vercel.app/callback/';
 //var redirect_uri =  'http://matthewcurtis4.github.io/SpotiStat/express/callback/';
 
-var frontend_redirect = 'https://spoti-stat-v1-f2rzwyjyc-matthewcurtis4.vercel.app//InfoPage';
 
 
+var port = process.env.PORT || 'http://localhost:8888/';
+var redirect_uri = process.env.REDIRECT_URI || 'http://localhost:8888/callback/'; // Your redirect uri
+var frontend_redirect = process.env.PORT_FE || 'http://localhost:3000/InfoPage';
+
+
+
+//var frontend_redirect = 'https://spoti-stat-v1.vercel.app/InfoPage';
 
 //var redirect_uri = process.env.REDIRECT_URI || 'https://shielded-forest-06718.herokuapp.com/callback/';
 //var frontend_redirect = process.env.REDIRECT_URI || 'https://quiet-earth-27756.herokuapp.com/InfoPage';
@@ -64,10 +71,10 @@ app.get('/login', function(req, res) {
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
       response_type: 'code',
-      client_id: client_id,
-      scope: scope,
-      redirect_uri: redirect_uri,
-      state: state
+      client_id: process.env.CLIENT_ID,
+      scope,
+      redirect_uri: process.env.REDIRECT_URI,
+      state
     }));
 });
 
