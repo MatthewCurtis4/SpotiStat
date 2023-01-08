@@ -29,7 +29,7 @@ var client_secret = process.env.CLIENT_SC; // Your secret
 
 var port = process.env.PORT || 'http://localhost:8888/';
 var redirect_uri = process.env.REDIRECT_URI || 'http://localhost:8888/callback/'; // Your redirect uri
-var frontend_redirect = process.env.PORT_FE || 'http://localhost:3000/InfoPage';
+var frontend_redirect = process.env.PORT_FE || 'https://spoti-stat-v1.vercel.app/InfoPage';
 
 
 
