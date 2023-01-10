@@ -1,5 +1,5 @@
 {
-  
+
   "name": "authtest",
   "version": "1.0.0",
   "description": "Spotify Auth Server",
@@ -23,16 +23,12 @@
   },
   "scripts": {
     "test": "node app.js",
-    "start": "node app.js",
-    "predeploy": "npm run build"
+    "start": "node app.js"
   },
   "engines": {
-    "node": "12.18.3",
-    "npm": "6.14.8"
+    "node": "18.12.1",
+    "npm": "9.2.0"
   },
   "author": "Spotify",
-  "license": "ISC",
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
-  }
+  "license": "ISC"
 }
