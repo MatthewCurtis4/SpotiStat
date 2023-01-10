@@ -22,7 +22,6 @@
     "spotify-web-api-js": "^1.4.0"
   },
   "scripts": {
-    
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

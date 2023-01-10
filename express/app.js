@@ -6,8 +6,7 @@
  * For more information, read
  * https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
  */
-
-
+//To run dont click run type in node authorization_code/app.js
 require('dotenv').config();
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
@@ -15,26 +14,11 @@ var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-//var client_id = process.env.SPOTIFY_CLIENT_ID; // Your client id
-//var client_secret = process.env.SPOTIFY_CLIENT_SECRET; // Your secret
-//var redirect_uri = process.env.REDIRECT_URI || 'http://localhost:8888/callback/';
-//var frontend_redirect = process.env.REDIRECT_URI || 'http://localhost:3000/InfoPage';
-
-var client_id = process.env.CLIENT_ID; // Your client id
-var client_secret = process.env.CLIENT_SC; // Your secret
-//var redirect_uri =  'https://spoti-stat-login.vercel.app/callback/';
-//var redirect_uri =  'http://matthewcurtis4.github.io/SpotiStat/express/callback/';
-
-
-
-var port = process.env.PORT || 'https://spoti-stat-login.vercel.app/';
-var redirect_uri = process.env.REDIRECT_URI || 'https://spoti-stat-login.vercel.app/callback/'; // Your redirect uri
-var frontend_redirect = process.env.PORT_FE || 'https://spoti-stat-v1.vercel.app/InfoPage';
-
-
-
-//var frontend_redirect = 'https://spoti-stat-v1.vercel.app/InfoPage';
-
+//var Port = process.env.PORT || 'http://localhost:8888/';
+var client_id = process.env.SPOTIFY_CLIENT_ID; // Your client id
+var client_secret = process.env.SPOTIFY_CLIENT_SECRET; // Your secret
+var redirect_uri = process.env.REDIRECT_URI || 'http://localhost:8888/callback/';
+var frontend_redirect = process.env.PORT_FE || 'http://localhost:3000/InfoPage';
 //var redirect_uri = process.env.REDIRECT_URI || 'https://shielded-forest-06718.herokuapp.com/callback/';
 //var frontend_redirect = process.env.REDIRECT_URI || 'https://quiet-earth-27756.herokuapp.com/InfoPage';
 
@@ -71,10 +55,10 @@ app.get('/login', function(req, res) {
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
       response_type: 'code',
-      client_id: process.env.CLIENT_ID,
-      scope,
-      redirect_uri: process.env.REDIRECT_URI,
-      state
+      client_id: client_id,
+      scope: scope,
+      redirect_uri: redirect_uri,
+      state: state
     }));
 });
 
@@ -165,4 +149,4 @@ app.get('/refresh_token', function(req, res) {
 });
 
 console.log('Listening on 8888');
-app.listen(port);
+app.listen(process.env.PORT || 8888);
