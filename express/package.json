@@ -20,6 +20,8 @@
 
     "cors": "^2.8.5",
 
+    "dotenv": "^16.3.1",
+
     "express": "^4.17.1",
 
     "querystring": "~0.2.0",
@@ -30,7 +32,7 @@
 
     "react-router-dom": "^5.1.2",
 
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
 
     "request": "^2.83.0",
 

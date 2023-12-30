@@ -1,221 +1,230 @@
-.App {
-  padding-top: 80px;
-  /* background: rgb(104, 119, 187); */
-    background: rgb(63, 205, 7);
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Lato:wght@300&display=swap');
+
+
+a {
+   text-decoration: none; /*remove underline on links*/
 }
 
-.MainPage-bkg{
-	padding-top: 80px;
-	background: rgb(104, 119, 187);
-  }
 
-.login-style { 
-	text-align: center;
-	background: rgb(116, 187, 104);
-	  
-	height: 300px;
-	min-width: 300px;
-	padding: 80px;  
-	border-radius: 1.5em;
-	font-family: "CopperPlate", fantasy;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	box-shadow: 0 8px 16px 0 rgba(255, 0, 0), 0 6px 20px 0 rgba(248, 1, 1, 0.19);
-    overflow: 'auto'
+
+.login-style {
+   text-align: center;
+   background: rgb(116, 187, 104);
+    
+   height: 300px;
+   min-width: 300px;
+   padding: 80px; 
+   border-radius: 1.5em;
+   font-family: 'Lato', sans-serif;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   box-shadow: 0 8px 16px 0 rgba(255, 0, 0), 0 6px 20px 0 rgba(248, 1, 1, 0.19);
+   overflow: 'auto'
 
 }
 .Darker {
-  color: black;
+ color: black;
 }
 .App {
-  text-align: center;
+ text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+ animation: App-logo-spin infinite 20s linear;
+ height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+ background-color: #222;
+ height: 150px;
+ padding: 20px;
+ color: white;
 }
 
 
 
 .App-intro {
-  font-size: large;
+ font-size: large;
 }
 
 
-div, button {
-  margin: 15px;
-}
-div, button-center {
-	margin: 15px;
-	text-align: center;
 
-}
+
 
 .button-login {
-	margin: 15px;
-	display: inline-block;
-	padding: 10px 15px;
-	font-size: 20px;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	outline: none;
-	color: #fff;
-	background-color: #005303;
-	border: none;
-	border-radius: 15px;
-	box-shadow: 0 6px rgb(55, 46, 46);
-  }
-  
+   margin: 15px;
+   display: inline-block;
+   padding: 10px 15px;
+   font-size: 20px;
+   cursor: pointer;
+   text-align: center;
+   text-decoration: none;
+   outline: none;
+   color: #fff;
+   background-color: #005303;
+   border: none;
+   border-radius: 15px;
+   box-shadow: 0 6px rgb(55, 46, 46);
+ }
   .button:hover {background-color: #3e8e41}
-  
   .button:active {
-	background-color: #3e8e41;
-	box-shadow: 0 5px #666;
-	transform: translateY(4px);
-  }	 
-	
+   background-color: #3e8e41;
+   box-shadow: 0 5px #666;
+   transform: translateY(4px);
+ } 
   
-.row:after{
-	clear:both;
+ .row:after{
+   clear:both;
 }
 
 .col {
-	background: grey;
-	/*border-radius: 5px;/*make rounded corners*/
-	padding: 10px 5px;
-	color: black;
-	float: left;
-	margin: 0.5%;
-	width: 15%;/*each of the columns take up 33%
-	(so in total take up whole width)
-	can use % for width, margin etc. if it goes over 100%
-	it will just keep wrapping around
-	USE PERCENTAGE CHANGES if you want it to look nice
-	on all devices and all sized browsers*/
+   background: grey;
+   /*border-radius: 5px;/*make rounded corners*/
+   padding: 10px 5px;
+   color: black;
+   float: left;
+   margin: 0.5%;
+   width: 15%;/*each of the columns take up 33%
+   (so in total take up whole width)
+   can use % for width, margin etc. if it goes over 100%
+   it will just keep wrapping around
+   USE PERCENTAGE CHANGES if you want it to look nice
+   on all devices and all sized browsers*/
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+
 
 li {
-  float: left;
+ float: left;
 }
 
 
 body{
-	background: rgb(104, 119, 187);;
-	font-family: arial;
+   background: rgb(104, 119, 187);;
+   font-family: 'Lato', sans-serif;
 }
 
 body.main{
-	background: white;
-	font-family: arial;
+   background: white;
+   font-family: 'Lato', sans-serif;
 }
 
 .wrapper{
-	text-align: center;
-	padding-top: 10px;
+   text-align: center;
+   padding-top: 10px;
 }
 
-h1 {
-	color: white;
-}
+
 
 h4 {
-  	color: black;
-	text-align: center;
-	padding: 5px 5px 5px 5px;
-	
+   color: black;
+   text-align: center;
+   padding: 5px 5px 5px 5px;
+  
 }
 
-a {
-	color: white;
-}
-li {
-	color: #333;
-}
+
+
 
 p {
-	background: #666;
-	color: white;
-	padding: 12px;
-	text-align: center;
+   background: #666;
+   color: white;
+   padding: 12px;
+   text-align: center;
 }
 
 .darker {
-	background: #333;
-	border-radius: 5px;/*make rounded corners*/
-	padding: 10px 10px 10px 10px;
-	width: 50%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+   background: #333;
+   border-radius: 5px;/*make rounded corners*/
+   padding: 10px 10px 10px 10px;
+   width: 50%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
 
-	/*text-align center;*/
+   /*text-align center;*/
 }
 
-.nav-link{
-	color: black;
-}
+
 
 h2.titlestart {
-	/*border: 1px solid red;*/
-	padding: 30px 0px 20px 0px;
+   /*border: 1px solid red;*/
+   padding: 30px 0px 20px 0px;
 }
 h2 {text-align: center;}
 
 .indexButton {
-	color: #111;
+   color: #111;
 }
 
 .center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 40%;
-  }
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 40%;
+ }
 
-  .centersmall {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 30%;
-  }
+ .centersmall {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 30%;
+ }
 
 
 
 .row{
-	padding: 20px 20px 20px 20px;
+   padding: 20px 20px 20px 20px;
 }
 .row:after{
 
-	clear:both;
+   clear:both;
 }
 
 #smaller-image{
-	width: 90%;
-	height: auto;
+   width: 90%;
+   height: auto;
 }
 
 
 img.rounded-corners {
-	border-radius: 30px;
-  }
+   border-radius: 30px;
+ }
 
+
+.navbar {
+	background-color: rgb(116, 187, 104);
+	color: white;
+	height: 70px;
+	}
+	
+.navbar ul {
+	background-color:rgb(116, 187, 104);
+	list-style-type: none;
+
+	display: flex;
+} 
+
+.navbar a {
+	color: #ffffff;
+	padding: 10px;
+	margin: 0 10px;
+}
+
+.navbar ul a:hover {
+	text-decoration: none; /* Remove underline on hover, if desired */
+	border-bottom: 2px #fff solid;
+}
+
+
+.navbar .flex {
+	justify-content: space-between;
+}
+
+.container {
+	max-width: 1100px; /*width of task bar*/
+	margin: 0 auto; /*zero top and bottom, auto l and r */
+}

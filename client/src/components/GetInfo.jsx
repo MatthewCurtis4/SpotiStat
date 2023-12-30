@@ -88,7 +88,17 @@ testTopTracks(T_range){
 <div className="App">
 
 
-<h1><b>Welcome to SpotiStat</b></h1>
+<div class="navbar">
+        <div class="container flex">
+             <h1 class="logo"><a href="index.html">SpotiStat</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Top Artists</a></li>
+                    <li><a href="features.html">Top Songs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
   
 
   <h3><b>Want To See Your Top Streamed Artists?</b></h3>
