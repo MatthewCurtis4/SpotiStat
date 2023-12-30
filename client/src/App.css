@@ -1,9 +1,14 @@
 .App {
   padding-top: 80px;
-  background: rgb(104, 119, 187);
+  /* background: rgb(104, 119, 187); */
+    background: rgb(63, 205, 7);
+
 }
 
-
+.MainPage-bkg{
+	padding-top: 80px;
+	background: rgb(104, 119, 187);
+  }
 
 .login-style { 
 	text-align: center;
