@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Lato:wght@300&display=swap');
 
 
-a {
-   text-decoration: none; /*remove underline on links*/
+
+.MainPage-bkg{
+	font-family: 'Lato', sans-serif;
 }
-
-
 
 .login-style {
    text-align: center;
@@ -209,13 +208,18 @@ img.rounded-corners {
 } 
 
 .navbar a {
-	color: #ffffff;
+	color: white;
 	padding: 10px;
 	margin: 0 10px;
+	text-decoration: none; /* Remove underline on hover, if desired */
+	
+
 }
 
 .navbar ul a:hover {
 	text-decoration: none; /* Remove underline on hover, if desired */
+	color: white;
+
 	border-bottom: 2px #fff solid;
 }
 
@@ -227,4 +231,9 @@ img.rounded-corners {
 .container {
 	max-width: 1100px; /*width of task bar*/
 	margin: 0 auto; /*zero top and bottom, auto l and r */
+}
+
+.logo a:hover{
+	text-decoration: none; /* Remove underline on hover, if desired */
+	color: white;
 }

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import '../App.css';
 
-
 /* eslint-disable */
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SpotifyWebApi from 'spotify-web-api-js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 
 const spotifyApi = new SpotifyWebApi();
 
@@ -90,7 +91,10 @@ testTopTracks(T_range){
 
 <div class="navbar">
         <div class="container flex">
-             <h1 class="logo"><a href="index.html">SpotiStat</a></h1>
+            <h1 class="logo">
+              <a href="index.html">SpotiStat <FontAwesomeIcon icon={faSpotify}></FontAwesomeIcon>
+              </a>
+            </h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Top Artists</a></li>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import '../App.css'
-var login = process.env.REACT_APP_PORT_BE || "https://spotistat-login.onrender.com/login";
+//var login = process.env.REACT_APP_PORT_BE || "https://spotistat-login.onrender.com/login";
+const login = process.env.REACT_APP_PORT_BE || 'http://localhost:8888/login';
+
 
 export class Home extends Component {
 
