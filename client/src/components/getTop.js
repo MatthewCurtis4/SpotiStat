@@ -3,26 +3,48 @@
 
 
 module.exports = {
-  top: function(data){ 
-var list = [];
-var string = "";
-var result;
-  data.items.forEach(function (track, index) {
-    list.push(index+1 + " ");
-    list.push(track.name);
-    list.push("<br>");
+  top: function (data, listType) {
+    var rows = [];
+    var row = [];
 
-    string.concat(track.name);
+    data.items.forEach(function (item, index) {
+      var imageUrl;
 
-   var newlist = list.join(",");
-   result = newlist.replace(/,/g, '');
-   
-    // Removing all the commas
-    console.log(result);
+      //imageUrl call is different depending on if its for a song or an artist
+      if (listType == "artists"){
+        imageUrl = item.images.length > 0 ? item.images[0].url : null
+      }
+      else{
+        imageUrl = item.album.images.length > 0 ? item.album.images[0].url : null
+      }
 
+      row.push({
+        rank: index + 1,
+        name: item.name,
+        image: imageUrl,
+      });
 
+      // Check if the row is full (5 items), then start a new row
+      if (row.length === 5 || index === data.items.length - 1) {
+        rows.push(row);
+        row = [];
+      }
+    });
+
+    // Create HTML for the grid
+    var result = rows.map(function (row, rowIndex) {
+      var rowHtml = row.map(function (item) {
+        return (
+          `<div class="item">
+            ${item.image ? `<img src="${item.image}" alt="${item.name}">` : ''}
+            <div class="item-info">${item.rank}. ${item.name}</div>
+          </div>`
+        );
+      }).join("");
+
+      return `<div class="row" key="${rowIndex}">${rowHtml}</div>`;
+    }).join("");
+
+    return result;
   }
-)
-return result;
-}
 };

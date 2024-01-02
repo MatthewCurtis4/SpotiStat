@@ -7,7 +7,7 @@ export class InfoPage extends Component {
 
     render() {
         return (
-            <div class="MainPage-bkg" >
+            <div class="body" >
                 <GetInfo /> 
             </div>
         )

@@ -64,7 +64,7 @@ testTopArtists(T_range){
     function (data) { 
       var tools = require('./getTop.js');
       //got top from getArtist.js
-      var value = tools.top(data);
+      var value = tools.top(data, "artists");
 
       document.getElementById('TopArtists').innerHTML = value ;
       /* TopArtists or whatever is in there is just calling the section that is below on output section
@@ -77,7 +77,7 @@ testTopTracks(T_range){
   spotifyApi.getMyTopTracks({limit:50, time_range:T_range}).then(
     function (data) { 
       var tools = require('./getTop.js');
-      var value = tools.top(data);
+      var value = tools.top(data, "songs");
 
       document.getElementById('TopSongs').innerHTML = value ;
 });
@@ -86,7 +86,7 @@ testTopTracks(T_range){
   render() {
     return (
         
-<div className="App">
+<div className="container">
 
 
 <div class="navbar">
@@ -105,7 +105,7 @@ testTopTracks(T_range){
     </div>
   
 
-  <h3><b>Want To See Your Top Streamed Artists?</b></h3>
+  <h3><b>Top Artists</b></h3>
   <h4><b>Select a Time Range</b></h4>
   <div className="row">
           <div className="col">
@@ -159,6 +159,7 @@ testTopTracks(T_range){
           <img src={this.state.nowPlaying.image} style={{ height: 150 }}/>
         </div>
 
+{/* 
         <div id="PlayingNamesong"></div>
         
         <div id="PlayingNameartist"></div>
@@ -168,7 +169,7 @@ testTopTracks(T_range){
             Check Now Playing
           </button>
         }
-        
+         */}
       </div>
       )
           }
