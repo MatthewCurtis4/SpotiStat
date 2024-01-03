@@ -38,6 +38,13 @@
     overflow: hidden;
 	display: flex;
   }
+
+.item-text {
+    background-color: rgb(116, 187, 104);
+    border-radius: 10px;
+
+  }
+
   
 .features .item {
     padding: 40px;

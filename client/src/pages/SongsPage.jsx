@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link, Redirect } from 'react-router-dom';
 import { Tab, initMDB } from 'mdb-ui-kit';
 
 
@@ -22,6 +22,7 @@ export class SongsPage extends Component {
         // Access the global variable and set it in the Spotify API instance
         if (window.accessToken) {
           spotifyApi.setAccessToken(window.accessToken);
+
         }
     
         this.state = {
@@ -57,36 +58,26 @@ export class SongsPage extends Component {
         return hashParams;
       }
     
-      getNowPlaying(){
-        spotifyApi.getMyCurrentPlaybackState()
-          .then((response) => {
-            this.setState({
-              nowPlaying: { 
-                  name: response.item.name, 
-                  songName: response.item.artists[0].name,
-                  image: response.item.album.images[0].url
-                }
-            });
-            var cSong = this.state.nowPlaying.name;
-            var cArtist = this.state.nowPlaying.songName;
-            document.getElementById('PlayingNamesong').innerHTML = cSong ;
-            document.getElementById('PlayingNameartist').innerHTML = cArtist ;})      
+
     
-    
-          }
-    
-          testTopTracks(T_range){
-            spotifyApi.getMyTopTracks({limit:50, time_range:T_range}).then(
-              function (data) { 
-                  var tools = require('../components/getTop.js');
-                  var value = tools.top(data, "songs");
-          
-                document.getElementById('TopSongs').innerHTML = value ;
-          });
-          }
+        testTopTracks(T_range){
+        spotifyApi.getMyTopTracks({limit:50, time_range:T_range}).then(
+            function (data) { 
+                var tools = require('../components/getTop.js');
+                var value = tools.top(data, "songs");
+        
+            document.getElementById('TopSongs').innerHTML = value ;
+        });
+        }
     
       render() {
+        //if they are no longer logged in, redirect them to the home page where they will be properly prompted
+        if (!this.state.loggedIn) {
+            window.location.href = '/InfoPage';
+            return null; // Render nothing, as the page will be redirected
+          }
         return (
+            
         <div class = "container">
     
          <div class="navbar">

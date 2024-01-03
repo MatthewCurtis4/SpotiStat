@@ -9,7 +9,7 @@ const SingleFeature = ({feature}) => {
             {feature.icon}
         </span>
         <h4 className='item-title fs-25'>{feature.title}</h4>
-        <p className='fs-19 text' style={{ Height: '3em' }}>{feature.text}</p>
+        <p className='item-text' style={{ Height: '3em' }}>{feature.text}</p>
     </div>
   )
 }

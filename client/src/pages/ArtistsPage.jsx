@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link, Redirect } from 'react-router-dom';
 import { Tab, initMDB } from 'mdb-ui-kit';
 
 
@@ -45,23 +45,6 @@ export class ArtistsPage extends Component {
       this.testTopArtists('short_term');
     }
 
-  getNowPlaying(){
-    spotifyApi.getMyCurrentPlaybackState()
-      .then((response) => {
-        this.setState({
-          nowPlaying: { 
-              name: response.item.name, 
-              songName: response.item.artists[0].name,
-              image: response.item.album.images[0].url
-            }
-        });
-        var cSong = this.state.nowPlaying.name;
-        var cArtist = this.state.nowPlaying.songName;
-        document.getElementById('PlayingNamesong').innerHTML = cSong ;
-        document.getElementById('PlayingNameartist').innerHTML = cArtist ;})      
-
-
-      }
 
 testTopArtists(T_range){
   spotifyApi.getMyTopArtists({limit:50, time_range:T_range}).then(
@@ -78,6 +61,11 @@ testTopArtists(T_range){
 }
 
   render() {
+        //if they are no longer logged in, redirect them to the home page where they will be properly prompted
+        if (!this.state.loggedIn) {
+          window.location.href = '/InfoPage';
+          return null; // Render nothing, as the page will be redirected
+        }
     return (
       
       <div class = "container">

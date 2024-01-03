@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import '../App.css';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link , Redirect} from 'react-router-dom';
 import Features from '../components/HomePage/Features';
 import SearchOptions from '../components/HomePage/SearchOptions';
+import LoginPrompt from '../components/HomePage/LoginPrompt';
 
 
 
@@ -95,9 +96,10 @@ testTopTracks(T_range){
 }
 
   render() {
+
     return (
       <div class = "container">
-     
+
     <div class="navbar">
         <div class="container flex">
             
@@ -115,11 +117,24 @@ testTopTracks(T_range){
     </div>
 
     <div class="container-wrapper">
-        <div className='square-box'>
+
+        {this.state.loggedIn ? (
+            //if they are logged in
+          <div className='square-box'>
+          <h3 class="header-title"><b>Welcome to SpotiStat</b></h3>
+          <h4 class= "sub-header"><b>What Would You Like To View Today?</b></h4>
+          <SearchOptions />
+          </div>
+        ) : (
+          // If not logged in, go to login page
+          <div>
+            <div className='square-box'>
             <h3 class="header-title"><b>Welcome to SpotiStat</b></h3>
-            <h4 class= "sub-header"><b>What Would You Like To View Today?</b></h4>
-            <SearchOptions />
-        </div>
+            <h4 class= "sub-header"><b>Login below to view all your spotify listening stats!</b></h4>
+            <LoginPrompt />
+            </div>
+          </div>
+        )}
     </div>
 
     <h3 class="header-title"><b>What Do We Offer at SpotiStat?</b></h3>

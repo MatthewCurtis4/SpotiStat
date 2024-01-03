@@ -37,7 +37,7 @@ const typesOfSearchs = [
     {
         id: 3,
         title: "View Your Top Genres",
-        location: "/ArtistsPage"
+        location: "/"
 
     },
 ];
