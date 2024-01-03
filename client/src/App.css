@@ -1,16 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Lato:wght@300&display=swap');
 
+h1 {
+   list-style-type: none;
+   text-decoration: none; /* Remove underline on hover, if desired */
 
+}
 
 .body{
 	font-family: 'Lato', sans-serif;
+
 	margin: 0;
 	padding: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	min-height:  65vh;
 }
 
 .login-style {
@@ -213,11 +218,11 @@ img.rounded-corners {
 	color: white;
 	padding: 10px;
 	margin: 0 10px;
-	text-decoration: none; /* Remove underline on hover, if desired */
+	text-decoration: none; /* Remove underline on hover */
 }
 
 .navbar ul a:hover {
-	text-decoration: none; /* Remove underline on hover, if desired */
+	text-decoration: none; /* Remove underline on hover */
 	color: white;
 
 	border-bottom: 2px #fff solid;
@@ -262,7 +267,7 @@ artist and song box display styling
   }
 
 .item-info {
-	padding-top: 5px;
+	padding-top: px;
 	height: 1.5em; /*fixs two line title issue with layout and image size. setting height to 1.5 is = to one line, so the other line overflows below */
 	display: flex;
 	flex-direction: column;

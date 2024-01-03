@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import '../App.css';
+import { Switch, Route, Link } from 'react-router-dom';
+
+// Import pages
+import ArtistsPage from './ArtistsPage';
+import test from './test';
+
 
 /* eslint-disable */
 
@@ -9,6 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 
 const spotifyApi = new SpotifyWebApi();
+const login = process.env.REACT_APP_PORT_BE || 'http://localhost:8888/login';
 
 
 export class GetInfo extends Component {
@@ -85,25 +92,26 @@ testTopTracks(T_range){
 
   render() {
     return (
-        
-<div className="container">
+      <div>
+     
+     <div class="navbar">
+                    <div class="container flex">
+                        <h1 class="logo">
+                        <li><Link to="/ArtistsPage">Top Artists<FontAwesomeIcon icon={faSpotify}></FontAwesomeIcon>
+                        </Link></li>
+                        </h1>
+                        <nav>
+                            <ul>
+                                <li><Link to="/ArtistsPage">Top Artists</Link></li>
+                                <li><a href="ArtistsPage.jsx">Top Artists</a></li>
+                                <li><a href="songsPage.html">Top Songs</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
 
 
-<div class="navbar">
-        <div class="container flex">
-            <h1 class="logo">
-              <a href="index.html">SpotiStat <FontAwesomeIcon icon={faSpotify}></FontAwesomeIcon>
-              </a>
-            </h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Top Artists</a></li>
-                    <li><a href="features.html">Top Songs</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-  
 
   <h3><b>Top Artists</b></h3>
   <h4><b>Select a Time Range</b></h4>
@@ -157,7 +165,10 @@ testTopTracks(T_range){
 
         <div>
           <img src={this.state.nowPlaying.image} style={{ height: 150 }}/>
-        </div>
+        </div> 
+
+
+
 
 {/* 
         <div id="PlayingNamesong"></div>
@@ -171,6 +182,7 @@ testTopTracks(T_range){
         }
          */}
       </div>
+
       )
           }
         }
