@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { Switch, Route, Link } from 'react-router-dom';
+import Features from '../components/HomePage/Features';
 
 
 
@@ -11,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SpotifyWebApi from 'spotify-web-api-js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
-
+import { faHeadphones } from '@fortawesome/free-solid-svg-icons'
 
 const spotifyApi = new SpotifyWebApi();
 const login = process.env.REACT_APP_PORT_BE || 'http://localhost:8888/login';
@@ -111,6 +112,22 @@ testTopTracks(T_range){
             </nav>
         </div>
     </div>
+
+    <Features />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <h3><b>Want To See Your Top Streamed Artists?</b></h3>
   <h4><b>Select a Time Range</b></h4>
@@ -212,36 +229,7 @@ testTopTracks(T_range){
           </li>
     </ul>
 
-        {/* Render the content based on the activeTab state */}
-        <div className="tab-content" id="ex1-content">
-          <div
-            className={`tab-pane fade ${this.state.activeTab === 'short_term' ? 'show active' : ''}`}
-            id="ex1-tabs-1"
-            role="tabpanel"
-            aria-labelledby="ex1-tab-1"
-          >
-            {/* Content for Past Month */}
-            Tab 1 content
-          </div>
-          <div
-            className={`tab-pane fade ${this.state.activeTab === 'medium_term' ? 'show active' : ''}`}
-            id="ex1-tabs-2"
-            role="tabpanel"
-            aria-labelledby="ex1-tab-2"
-          >
-            {/* Content for Past 6 Months */}
-            Tab 2 content
-          </div>
-          <div
-            className={`tab-pane fade ${this.state.activeTab === 'long_term' ? 'show active' : ''}`}
-            id="ex1-tabs-3"
-            role="tabpanel"
-            aria-labelledby="ex1-tab-3"
-          >
-            {/* Content for All Time */}
-            Tab 3 content
-          </div>
-        </div>
+
 
       <div id="TopSongs"></div>
 

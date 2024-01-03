@@ -278,3 +278,35 @@ artist and song box display styling
 	flex-direction: column;
 }
 
+/* Main Page */
+.stats {
+   padding-top: 100px;
+   animation: slideInFromBottom 1s ease-in;
+ }
+ 
+ .stats-heading {
+   max-width: 500px;
+   margin: auto;
+ }
+ 
+ .stats .grid {
+   display: flex; /* Use Flexbox to make items horizontal */
+   justify-content: space-around; /* Adjust the spacing between items */
+   flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+ }
+ 
+ .stats .grid div {
+   flex-basis: calc(33.33% - 20px); /* Ensure each item takes up one-third of the space with some spacing */
+   margin-bottom: 20px; /* Added for better spacing between items */
+   text-align: center; /* Center the text in each item */
+ }
+ 
+ .stats .grid h3 {
+   font-size: 35px;
+ }
+ 
+ .stats .grid p {
+   font-size: 20px;
+   font-weight: bold;
+ }
+ 

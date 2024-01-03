@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Tab, initMDB } from 'mdb-ui-kit';
-
+import Features from '../components/HomePage/Features';
 
 
 
@@ -80,6 +80,7 @@ testTopArtists(T_range){
 
   render() {
     return (
+      
       <div class = "container">
 
      <div class="navbar">
@@ -96,7 +97,6 @@ testTopArtists(T_range){
                         </nav>
                     </div>
                 </div>
-
 
 
 
