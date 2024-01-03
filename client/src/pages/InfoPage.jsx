@@ -12,6 +12,7 @@ import SpotifyWebApi from 'spotify-web-api-js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 
+
 const spotifyApi = new SpotifyWebApi();
 const login = process.env.REACT_APP_PORT_BE || 'http://localhost:8888/login';
 
@@ -93,72 +94,154 @@ testTopTracks(T_range){
 
   render() {
     return (
-      <div>
+      <div class = "container">
      
-     <div class="navbar">
-                    <div class="container flex">
-                        
-                        <h1 class="logo">
-                            <li><Link to="/InfoPage" title="navTitle">SpotiStat<FontAwesomeIcon icon={faSpotify}></FontAwesomeIcon>
-                          </Link></li>
-                        </h1>
-                        <nav>
-                            <ul>
-                                <li><Link to="/ArtistsPage">Top Artists</Link></li>
-                                <li><Link to="/SongsPage">Top Songs</Link></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+    <div class="navbar">
+        <div class="container flex">
+            
+            <h1 class="logo">
+                <li><Link to="/InfoPage" title="navTitle">SpotiStat<FontAwesomeIcon icon={faSpotify}></FontAwesomeIcon>
+                </Link></li>
+            </h1>
+            <nav>
+                <ul>
+                    <li><Link to="/ArtistsPage">Top Artists</Link></li>
+                    <li><Link to="/SongsPage">Top Songs</Link></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
-
-  <h3><b>Top Artists</b></h3>
+    <h3><b>Want To See Your Top Streamed Artists?</b></h3>
   <h4><b>Select a Time Range</b></h4>
-  <div className="row">
-          <div className="col">
-          { this.state.loggedIn &&
-    <button onClick={() => this.testTopArtists("short_term")}>
-      Past Month
-    </button>}
-          </div>
-          <div className="col">
-          { this.state.loggedIn &&
-    <button onClick={() => this.testTopArtists("medium_term")}>
-      Past 6 Months
-    </button>}
-          </div>
-          <div className="col">
-          { this.state.loggedIn &&
-    <button onClick={() => this.testTopArtists("long_term")}>
-      All Time
-    </button>}
-          </div>        
-      </div>
+    <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+          <li className="nav-item" role="presentation">
+            <a
+              data-mdb-tab-init
+              className={`nav-link ${this.state.activeTab === 'short_term' ? 'active' : ''}`}
+              id="ex1-tab-1"
+              href="#ex1-tabs-1"
+              role="tab"
+              aria-controls="ex1-tabs-1"
+              aria-selected={this.state.activeTab === 'short_term'}
+              onClick={() => this.testTopArtists('short_term')}
+            >
+              Past Month
+            </a>
+          </li>
+          <li className="nav-item" role="presentation">
+            <a
+              data-mdb-tab-init
+              className={`nav-link ${this.state.activeTab === 'medium_term' ? 'active' : ''}`}
+              id="ex1-tab-2"
+              href="#ex1-tabs-2"
+              role="tab"
+              aria-controls="ex1-tabs-2"
+              aria-selected={this.state.activeTab === 'medium_term'}
+              onClick={() => this.testTopArtists('medium_term')}
+            >
+              Past 6 Months
+            </a>
+          </li>
+          <li className="nav-item" role="presentation">
+            <a
+              data-mdb-tab-init
+              className={`nav-link ${this.state.activeTab === 'long_term' ? 'active' : ''}`}
+              id="ex1-tab-3"
+              href="#ex1-tabs-3"
+              role="tab"
+              aria-controls="ex1-tabs-3"
+              aria-selected={this.state.activeTab === 'long_term'}
+              onClick={() => this.testTopArtists('long_term')}
+            >
+              All Time
+            </a>
+          </li>
+    </ul>
 
-      <div id="TopArtists"></div>
+<div id="TopArtists"></div>
+
+
+
 
       <h3><b>Want To See Your Top Streamed Songs?</b></h3>
   <h4><b>Select a Time Range</b></h4>
-  <div className="row">
-          <div className="col">
-          { this.state.loggedIn &&
-    <button onClick={() => this.testTopTracks("short_term")}>
-      Past Month
-    </button>}
+
+  <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+          <li className="nav-item" role="presentation">
+            <a
+              data-mdb-tab-init
+              className={`nav-link ${this.state.activeTab === 'short_term' ? 'active' : ''}`}
+              id="ex1-tab-1"
+              href="#ex1-tabs-1"
+              role="tab"
+              aria-controls="ex1-tabs-1"
+              aria-selected={this.state.activeTab === 'short_term'}
+              onClick={() => this.testTopTracks("short_term")}
+            >
+              Past Month
+            </a>
+          </li>
+          <li className="nav-item" role="presentation">
+            <a
+              data-mdb-tab-init
+              className={`nav-link ${this.state.activeTab === 'medium_term' ? 'active' : ''}`}
+              id="ex1-tab-2"
+              href="#ex1-tabs-2"
+              role="tab"
+              aria-controls="ex1-tabs-2"
+              aria-selected={this.state.activeTab === 'medium_term'}
+              onClick={() => this.testTopTracks('medium_term')}
+            >
+              Past 6 Months
+            </a>
+          </li>
+          <li className="nav-item" role="presentation">
+            <a
+              data-mdb-tab-init
+              className={`nav-link ${this.state.activeTab === 'long_term' ? 'active' : ''}`}
+              id="ex1-tab-3"
+              href="#ex1-tabs-3"
+              role="tab"
+              aria-controls="ex1-tabs-3"
+              aria-selected={this.state.activeTab === 'long_term'}
+              onClick={() => this.testTopTracks('long_term')}
+            >
+              All Time
+            </a>
+          </li>
+    </ul>
+
+        {/* Render the content based on the activeTab state */}
+        <div className="tab-content" id="ex1-content">
+          <div
+            className={`tab-pane fade ${this.state.activeTab === 'short_term' ? 'show active' : ''}`}
+            id="ex1-tabs-1"
+            role="tabpanel"
+            aria-labelledby="ex1-tab-1"
+          >
+            {/* Content for Past Month */}
+            Tab 1 content
           </div>
-          <div className="col">
-          { this.state.loggedIn &&
-    <button onClick={() => this.testTopTracks("medium_term")}>
-      Past 6 Months
-    </button>}
+          <div
+            className={`tab-pane fade ${this.state.activeTab === 'medium_term' ? 'show active' : ''}`}
+            id="ex1-tabs-2"
+            role="tabpanel"
+            aria-labelledby="ex1-tab-2"
+          >
+            {/* Content for Past 6 Months */}
+            Tab 2 content
           </div>
-          <div className="col">
-          { this.state.loggedIn &&
-    <button onClick={() => this.testTopTracks("long_term")}>
-      All Time
-    </button>}
-          </div>        
-      </div>
+          <div
+            className={`tab-pane fade ${this.state.activeTab === 'long_term' ? 'show active' : ''}`}
+            id="ex1-tabs-3"
+            role="tabpanel"
+            aria-labelledby="ex1-tab-3"
+          >
+            {/* Content for All Time */}
+            Tab 3 content
+          </div>
+        </div>
 
       <div id="TopSongs"></div>
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { Switch, Route, Link } from 'react-router-dom';
+import { Tab, initMDB } from 'mdb-ui-kit';
 
 
 
@@ -26,6 +27,8 @@ export class SongsPage extends Component {
         this.state = {
           loggedIn: window.accessToken ? true : false,
           nowPlaying: { name: 'Not Checked', albumArt: '' },
+          activeTab: 'short_term', // Set the initial active tab to 'short_term' because that is what will be shown when you open page first
+
         };
     
         this.artiststate = {
@@ -34,6 +37,14 @@ export class SongsPage extends Component {
         this.list = [];
       }
       
+      //this is where i initalize the tab as this month on page load
+      componentDidMount() {
+        // Initialization for ES Users
+        initMDB({ Tab });
+    
+        // Trigger the initial tab content based on the default state
+        this.testTopTracks('short_term');
+      }
       getHashParams() {
         var hashParams = {};
         var e, r = /([^&;=]+)=?([^&;]*)/g,
@@ -76,7 +87,7 @@ export class SongsPage extends Component {
     
       render() {
         return (
-          <div>
+        <div class = "container">
     
          <div class="navbar">
                         <div class="container flex">
@@ -97,32 +108,57 @@ export class SongsPage extends Component {
     
                     <h3><b>Want To See Your Top Streamed Songs?</b></h3>
   <h4><b>Select a Time Range</b></h4>
-  <div className="row">
-          <div className="col">
-          { this.state.loggedIn &&
-    <button onClick={() => this.testTopTracks("short_term")}>
-      Past Month
-    </button>}
-          </div>
-          <div className="col">
-          { this.state.loggedIn &&
-    <button onClick={() => this.testTopTracks("medium_term")}>
-      Past 6 Months
-    </button>}
-          </div>
-          <div className="col">
-          { this.state.loggedIn &&
-    <button onClick={() => this.testTopTracks("long_term")}>
-      All Time
-    </button>}
-          </div>        
-      </div>
+
+  <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+          <li className="nav-item" role="presentation">
+            <a
+              data-mdb-tab-init
+              className={`nav-link ${this.state.activeTab === 'short_term' ? 'active' : ''}`}
+              id="ex1-tab-1"
+              href="#ex1-tabs-1"
+              role="tab"
+              aria-controls="ex1-tabs-1"
+              aria-selected={this.state.activeTab === 'short_term'}
+              onClick={() => this.testTopTracks("short_term")}
+            >
+              Past Month
+            </a>
+          </li>
+          <li className="nav-item" role="presentation">
+            <a
+              data-mdb-tab-init
+              className={`nav-link ${this.state.activeTab === 'medium_term' ? 'active' : ''}`}
+              id="ex1-tab-2"
+              href="#ex1-tabs-2"
+              role="tab"
+              aria-controls="ex1-tabs-2"
+              aria-selected={this.state.activeTab === 'medium_term'}
+              onClick={() => this.testTopTracks('medium_term')}
+            >
+              Past 6 Months
+            </a>
+          </li>
+          <li className="nav-item" role="presentation">
+            <a
+              data-mdb-tab-init
+              className={`nav-link ${this.state.activeTab === 'long_term' ? 'active' : ''}`}
+              id="ex1-tab-3"
+              href="#ex1-tabs-3"
+              role="tab"
+              aria-controls="ex1-tabs-3"
+              aria-selected={this.state.activeTab === 'long_term'}
+              onClick={() => this.testTopTracks('long_term')}
+            >
+              All Time
+            </a>
+          </li>
+    </ul>
 
       <div id="TopSongs"></div>
-
+{/* 
         <div>
           <img src={this.state.nowPlaying.image} style={{ height: 150 }}/>
-        </div> 
+        </div>  */}
     
     
     

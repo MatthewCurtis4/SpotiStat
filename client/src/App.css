@@ -162,6 +162,10 @@ h2.titlestart {
 }
 h3, h2 {text-align: center;}
 
+h3 {
+   padding-top: 10px;
+
+}
 .indexButton {
    color: #111;
 }
@@ -205,6 +209,7 @@ img.rounded-corners {
 	background-color: rgb(116, 187, 104);
 	color: white;
 	height: 70px;
+   padding-bottom: 30px;
 	}
 	
 .navbar ul {
