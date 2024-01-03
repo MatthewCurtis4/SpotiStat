@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import { Switch, Route, Link } from 'react-router-dom';
 import Features from '../components/HomePage/Features';
+import SearchOptions from '../components/HomePage/SearchOptions';
 
 
 
@@ -113,6 +114,16 @@ testTopTracks(T_range){
         </div>
     </div>
 
+    <div class="container-wrapper">
+        <div className='square-box'>
+            <h3 class="header-title"><b>Welcome to SpotiStat</b></h3>
+            <h4 class= "sub-header"><b>What Would You Like To View Today?</b></h4>
+            <SearchOptions />
+        </div>
+    </div>
+
+    <h3 class="header-title"><b>What Do We Offer at SpotiStat?</b></h3>
+
     <Features />
 
 
@@ -129,8 +140,8 @@ testTopTracks(T_range){
 
 
 
-    <h3><b>Want To See Your Top Streamed Artists?</b></h3>
-  <h4><b>Select a Time Range</b></h4>
+    <h3 class="header-title"><b>Want To See Your Top Streamed Artists?</b></h3>
+  <h4 class= "sub-header"><b>Select a Time Range</b></h4>
     <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
           <li className="nav-item" role="presentation">
             <a
@@ -181,8 +192,8 @@ testTopTracks(T_range){
 
 
 
-      <h3><b>Want To See Your Top Streamed Songs?</b></h3>
-  <h4><b>Select a Time Range</b></h4>
+<h3 class="header-title"><b>Want To See Your Top Streamed Songs?</b></h3>
+  <h4 class= "sub-header"><b>Select a Time Range</b></h4>
 
   <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
           <li className="nav-item" role="presentation">

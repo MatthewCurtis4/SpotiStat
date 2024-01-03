@@ -35,7 +35,7 @@ module.exports = {
     var result = rows.map(function (row, rowIndex) {
       var rowHtml = row.map(function (item) {
         return (
-          `<div class="item">
+          `<div class="item1">
             ${item.image ? `<img src="${item.image}" alt="${item.name}">` : ''}
             <div class="item-info">${item.rank}. ${item.name}</div>
           </div>`

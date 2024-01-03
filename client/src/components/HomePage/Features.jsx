@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Features.css";
-import features from "./FeaturesData";
+import data from "../data";
 import SingleFeature from './SingleFeature.jsx';
 
 const Features = () => {
@@ -13,7 +13,7 @@ const Features = () => {
 
                 <div className='item-list grid text-white text-center'>
                     {
-                        features.map(feature => {
+                        data.features.map(feature => {
                             return (
                                 <SingleFeature feature = {feature} key = {feature.id} />
                             )

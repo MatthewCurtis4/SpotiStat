@@ -106,8 +106,8 @@ export class SongsPage extends Component {
     
     
     
-                    <h3><b>Want To See Your Top Streamed Songs?</b></h3>
-  <h4><b>Select a Time Range</b></h4>
+    <h3 class="header-title"><b>Want To See Your Top Streamed Songs?</b></h3>
+  <h4 class= "sub-header"><b>Select a Time Range</b></h4>
 
   <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
           <li className="nav-item" role="presentation">

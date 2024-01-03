@@ -10,9 +10,6 @@ const SingleFeature = ({feature}) => {
         </span>
         <h4 className='item-title fs-25'>{feature.title}</h4>
         <p className='fs-19 text' style={{ Height: '3em' }}>{feature.text}</p>
-        <a href = "/" className='item-link text-grey'>
-            <BsArrowRightCircle size = {30} />
-        </a>
     </div>
   )
 }

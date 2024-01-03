@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../App.css';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Tab, initMDB } from 'mdb-ui-kit';
-import Features from '../components/HomePage/Features';
 
 
 
@@ -100,8 +99,8 @@ testTopArtists(T_range){
 
 
 
-  <h3><b>Want To See Your Top Streamed Artists?</b></h3>
-  <h4><b>Select a Time Range</b></h4>
+  <h3 class="header-title"><b>Want To See Your Top Streamed Artists?</b></h3>
+  <h4 class= "sub-header"><b>Select a Time Range</b></h4>
     <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
           <li className="nav-item" role="presentation">
             <a
