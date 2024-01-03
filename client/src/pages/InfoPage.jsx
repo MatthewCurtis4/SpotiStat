@@ -4,6 +4,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 
 
 
+
 /* eslint-disable */
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,16 +20,19 @@ export class InfoPage extends Component {
   constructor(){
     super();
     const params = this.getHashParams();
+    //set the tokens globally to be used by other screens
     if (params.access_token) {
       spotifyApi.setAccessToken(params.access_token);
+        // Store tokens in a global variable or another storage mechanism
+        window.accessToken = params.access_token;
   }
     this.state = {
-      loggedIn: params.access_token ? true : false,
+      loggedIn: window.accessToken ? true : false,
       nowPlaying: { name: 'Not Checked', albumArt: '' }
 
     }
     this.artiststate = {
-      loggedIn: params.access_token ? true : false,
+      loggedIn: window.accessToken ? true : false,
     }
     this.list = [];
   }

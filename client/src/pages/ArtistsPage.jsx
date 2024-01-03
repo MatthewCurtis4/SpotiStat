@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import { Switch, Route, Link } from 'react-router-dom';
 
-// Import pages
+
 
 
 /* eslint-disable */
@@ -18,32 +18,23 @@ const spotifyApi = new SpotifyWebApi();
 export class ArtistsPage extends Component {
   constructor(){
     super();
-    const params = this.getHashParams();
-    if (params.access_token) {
-      spotifyApi.setAccessToken(params.access_token);
-  }
-    this.state = {
-      loggedIn: params.access_token ? true : false,
-      nowPlaying: { name: 'Not Checked', albumArt: '' }
+    // Access the global variable and set it in the Spotify API instance
+    if (window.accessToken) {
+      spotifyApi.setAccessToken(window.accessToken);
+    }
 
-    }
+    this.state = {
+      loggedIn: window.accessToken ? true : false,
+      nowPlaying: { name: 'Not Checked', albumArt: '' },
+    };
+
     this.artiststate = {
-      loggedIn: params.access_token ? true : false,
-    }
+      loggedIn: window.accessToken ? true : false,
+    };
     this.list = [];
   }
   
-  getHashParams() {
-    var hashParams = {};
-    var e, r = /([^&;=]+)=?([^&;]*)/g,
-        q = window.location.hash.substring(1);
-    e = r.exec(q)
-    while (e) {
-       hashParams[e[1]] = decodeURIComponent(e[2]);
-       e = r.exec(q);
-    }
-    return hashParams;
-  }
+
 
   getNowPlaying(){
     spotifyApi.getMyCurrentPlaybackState()
