@@ -14,7 +14,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SpotifyWebApi from 'spotify-web-api-js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
-import { faHeadphones } from '@fortawesome/free-solid-svg-icons'
 
 const spotifyApi = new SpotifyWebApi();
 const login = process.env.REACT_APP_PORT_BE || 'http://localhost:8888/login';

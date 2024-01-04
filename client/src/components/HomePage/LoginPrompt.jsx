@@ -1,7 +1,8 @@
 import React from 'react';
 import {BsArrowRightCircle} from "react-icons/bs";
 import "./Features.css";
-import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 const login = process.env.REACT_APP_PORT_BE || 'http://localhost:8888/login';
 
 
@@ -17,7 +18,7 @@ const LoginPrompt = () => {
                     {
                     <div className='option '>
                     <h4>{"Click Here To Login"}</h4>
-                    <a className='item-link text-grey' href={login} > <BsArrowRightCircle size={30} /> </a>
+                    <a className='item-link text-grey' href={login} > <FontAwesomeIcon icon={faArrowRight} size="2x"/> </a>
                 </div> 
 
                     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import data from "../data";
-import {BsArrowRightCircle} from "react-icons/bs";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import "./Features.css";
 import { Link } from 'react-router-dom';
 
@@ -19,7 +20,7 @@ const SearchOptions = () => {
                                 <div className='option '>
                                 <h4>{functionOption.title}</h4>
                                 <Link to={functionOption.location} className='item-link text-grey'>
-                                    <BsArrowRightCircle size={30} />
+                                <FontAwesomeIcon icon={faArrowRight} size="2x" />
                                 </Link>
                             </div> 
                             )
