@@ -17,7 +17,7 @@ import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons'
 
 const spotifyApi = new SpotifyWebApi();
-const login = process.env.REACT_APP_PORT_BE || 'http://localhost:8888/login';
+var login = process.env.REACT_APP_PORT_BE || "https://spotistat-login.onrender.com/login";
 
 
 export class Main extends Component {
