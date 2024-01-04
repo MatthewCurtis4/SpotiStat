@@ -2,7 +2,7 @@ import React from 'react';
 import "./Features.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-const login = process.env.REACT_APP_PORT_BE || 'http://localhost:8888/login';
+const login = process.env.REACT_APP_PORT_BE || 'https://spotistat-login.onrender.com/login';
 
 
 const LoginPrompt = () => {

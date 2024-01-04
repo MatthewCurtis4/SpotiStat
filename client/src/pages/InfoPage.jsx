@@ -16,7 +16,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 
 const spotifyApi = new SpotifyWebApi();
-const login = process.env.REACT_APP_PORT_BE || 'http://localhost:8888/login';
 
 
 export class InfoPage extends Component {
@@ -127,23 +126,7 @@ testTopTracks(T_range){
           <h4 class= "sub-header"><b>What Would You Like To View Today?</b></h4>
           <SearchOptions />
           </div>
-        {/* {this.state.loggedIn ? (
-            //if they are logged in
-          <div className='square-box'>
-          <h3 class="header-title"><b>Welcome to SpotiStat</b></h3>
-          <h4 class= "sub-header"><b>What Would You Like To View Today?</b></h4>
-          <SearchOptions />
-          </div>
-        ) : (
-          // If not logged in, go to login page
-          <div>
-            <div className='square-box'>
-            <h3 class="header-title"><b>Welcome to SpotiStat</b></h3>
-            <h4 class= "sub-header"><b>Login below to view all your spotify listening stats!</b></h4>
-            <LoginPrompt />
-            </div>
-          </div>
-        )} */}
+
     </div>
 
     <h3 class="header-title"><b>What Do We Offer at SpotiStat?</b></h3>
