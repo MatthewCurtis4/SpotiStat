@@ -20,7 +20,7 @@ const SearchOptions = () => {
                                 <div className='option '>
                                 <h4>{functionOption.title}</h4>
                                 <Link to={functionOption.location} className='item-link text-grey'>
-                                <FontAwesomeIcon icon={faArrowRight} size="2x" />
+                                Click
                                 </Link>
                             </div> 
                             )

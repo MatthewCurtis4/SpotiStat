@@ -1,5 +1,4 @@
 import React from 'react';
-import {BsArrowRightCircle} from "react-icons/bs";
 import "./Features.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -18,9 +17,9 @@ const LoginPrompt = () => {
                     {
                     <div className='option '>
                     <h4>{"Click Here To Login"}</h4>
-                    <a className='item-link text-grey' href={login} > <FontAwesomeIcon icon={faArrowRight} size="2x"/> </a>
+                    <a className='item-link text-grey' href={login} > Click </a>
                 </div> 
-
+                // <FontAwesomeIcon icon={faArrowRight} size="2x"/>
                     }
                 </div>
             </div>
