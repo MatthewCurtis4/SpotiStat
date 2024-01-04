@@ -1,5 +1,4 @@
 import React from 'react';
-import {BsArrowRightCircle} from "react-icons/bs";
 import "./Features.css";
 
 const SingleFeature = ({feature}) => {
