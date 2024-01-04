@@ -12,6 +12,6 @@ As a result, I will add some photos here to provide a preview of the site.
 Project Website can be accessed [here](https://spoti-stat-v1.vercel.app/)
 
 Preview example of SpotiStat:
-![alt text](https://github.com/MatthewCurtis4/SpotiStat/blob/master/express/SpotiStatArtists-1.png)
 ![alt text](https://github.com/MatthewCurtis4/SpotiStat/blob/master/express/SpotiStatHomePage-1.png)
+![alt text](https://github.com/MatthewCurtis4/SpotiStat/blob/master/express/SpotiStatArtists-1.png)
 ![alt text](https://github.com/MatthewCurtis4/SpotiStat/blob/master/express/SpotiStatSongs-1.png)
