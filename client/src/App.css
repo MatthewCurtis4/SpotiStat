@@ -303,4 +303,18 @@ artist and song box display styling
 }
 
 
- 
+#center-container {
+   justify-content: center;
+ }
+
+     #title-container {
+      display: flex;
+      padding-top: 30px;
+    }
+
+    .subtitle {
+      text-align: center;
+      width: 30%;
+      text-align: center;
+      font-weight: bold;
+    }

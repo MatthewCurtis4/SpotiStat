@@ -5,9 +5,8 @@ import Main from './pages/Main';
 import InfoPage from './pages/InfoPage';
 import ArtistsPage from './pages/ArtistsPage.jsx';
 import SongsPage from './pages/SongsPage.jsx';
+import RecentPage from './pages/RecentPage';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 
 
   function App() {
@@ -17,29 +16,10 @@ import { faSpotify } from '@fortawesome/free-brands-svg-icons'
         <Route path='/InfoPage' component={InfoPage}/>
         <Route path='/ArtistsPage' component={ArtistsPage} />
         <Route path='/SongsPage' component={SongsPage} />
+        <Route path='/RecentPage' component={RecentPage} />
+
 
       </BrowserRouter>
-
-//       <div class="body" >
-//       <div class="container">
-//       <div class="navbar">
-//           <div class="container flex">
-//               <h1 class="logo">
-              
-//               <Link to="/">SpotiStat <FontAwesomeIcon icon={faSpotify} /></Link>
-//               </h1>
-//               <nav>
-//                   <ul>
-//                       <li><Link to="/ArtistsPage">Top Artists</Link></li>
-//                       <li><a href="ArtistsPage.jsx">Top </a></li>
-//                       <li><a href="songsPage.html">Top Songs</a></li>
-
-//                   </ul>
-//               </nav>
-//           </div>
-//       </div>
-//       </div>
-//   </div>
 
 
 

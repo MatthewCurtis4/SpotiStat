@@ -43,8 +43,8 @@ export class SongsPage extends Component {
         // Initialization for ES Users
         initMDB({ Tab });
     
-        // Trigger the initial tab content based on the default state
-        this.testTopTracks('short_term');
+        this.testRecentlyPlayed();
+
 
       }
       getHashParams() {
@@ -61,15 +61,18 @@ export class SongsPage extends Component {
     
 
     
-        testTopTracks(T_range){
-        spotifyApi.getMyTopTracks({limit:50, time_range:T_range}).then(
-            function (data) { 
-                var tools = require('../components/getTop.js');
-                var value = tools.top(data, "songs");
-        
-            document.getElementById('TopSongs').innerHTML = value ;
-        });
+    
+      testRecentlyPlayed(){
+            spotifyApi.getMyRecentlyPlayedTracks().then(
+                function(data) {
+                    var tools = require('../components/getRecent.js');
+                    var value = tools.recent(data);
+            
+                document.getElementById('RecentlyPlayed').innerHTML = value ;
+                }
+            );
         }
+
     
       render() {
         //if they are no longer logged in, redirect them to the home page where they will be properly prompted
@@ -77,6 +80,7 @@ export class SongsPage extends Component {
             window.location.href = '/';
             return null; // Render nothing, as the page will be redirected
           }
+
         return (
             
         <div class = "container">
@@ -97,78 +101,16 @@ export class SongsPage extends Component {
                             </nav>
                         </div>
                     </div>
-    
-    
-    
-    <h3 class="header-title"><b>Want To See Your Top Streamed Songs?</b></h3>
-  <h4 class= "sub-header"><b>Select a Time Range</b></h4>
 
-  <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
-          <li className="nav-item" role="presentation">
-            <a
-              data-mdb-tab-init
-              className={`nav-link ${this.state.activeTab === 'short_term' ? 'active' : ''}`}
-              id="ex1-tab-1"
-              href="#ex1-tabs-1"
-              role="tab"
-              aria-controls="ex1-tabs-1"
-              aria-selected={this.state.activeTab === 'short_term'}
-              onClick={() => this.testTopTracks("short_term")}
-            >
-              Past Month
-            </a>
-          </li>
-          <li className="nav-item" role="presentation">
-            <a
-              data-mdb-tab-init
-              className={`nav-link ${this.state.activeTab === 'medium_term' ? 'active' : ''}`}
-              id="ex1-tab-2"
-              href="#ex1-tabs-2"
-              role="tab"
-              aria-controls="ex1-tabs-2"
-              aria-selected={this.state.activeTab === 'medium_term'}
-              onClick={() => this.testTopTracks('medium_term')}
-            >
-              Past 6 Months
-            </a>
-          </li>
-          <li className="nav-item" role="presentation">
-            <a
-              data-mdb-tab-init
-              className={`nav-link ${this.state.activeTab === 'long_term' ? 'active' : ''}`}
-              id="ex1-tab-3"
-              href="#ex1-tabs-3"
-              role="tab"
-              aria-controls="ex1-tabs-3"
-              aria-selected={this.state.activeTab === 'long_term'}
-              onClick={() => this.testTopTracks('long_term')}
-            >
-              All Time
-            </a>
-          </li>
-    </ul>
+            <div id="title-container">
+                <h4 class="subtitle">Song Title</h4>
+                <h4 class="subtitle">Artist Name</h4>
+                <h4 class="subtitle">Time Played</h4>
+            </div> 
+            <div id="center-container">
+                <div id="RecentlyPlayed"></div>
+            </div>
 
-      <div id="TopSongs"></div>
-{/* 
-        <div>
-          <img src={this.state.nowPlaying.image} style={{ height: 150 }}/>
-        </div>  */}
-    
-    
-    
-    
-    
-    {/* 
-            <div id="PlayingNamesong"></div>
-            
-            <div id="PlayingNameartist"></div>
-    
-            { this.state.loggedIn &&
-              <button onClick={() => this.getNowPlaying()}>
-                Check Now Playing
-              </button>
-            }
-             */}
           </div>
     
           )

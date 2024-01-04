@@ -6,7 +6,7 @@ const features = [
         id: 1,
         icon: <FontAwesomeIcon icon={faHeadphones} style={{ color: 'rgb(116, 187, 104)'}}/>,
         title: "Find Your Top Artists and Songs",
-        text: "Take a blast to the past and view your top artists and songs from Spotify"
+        text: "Take a blast to the past and view your top artists and songs from Spotify!"
     },
     {
         id: 2,
@@ -17,8 +17,8 @@ const features = [
     {
         id: 3,
         icon: <FontAwesomeIcon icon={faGuitar} style={{ color: 'rgb(116, 187, 104)' }}/>,
-        title: "View Your All-Time Top Genres",
-        text: "Check out what genres on Spotify you have listened to the most all-time!"
+        title: "View Your Recent Listening History",
+        text: "Check out what you have been listening to recently by viewing a list of your recent tracks!"
     },
 ];
 
@@ -37,7 +37,7 @@ const typesOfSearchs = [
     {
         id: 3,
         title: "View Your Top Genres",
-        location: "/"
+        location: "/RecentPage"
 
     },
 ];

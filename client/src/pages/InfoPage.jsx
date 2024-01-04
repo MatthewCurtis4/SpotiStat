@@ -96,7 +96,11 @@ testTopTracks(T_range){
 }
 
   render() {
-
+        //if they are no longer logged in, redirect them to the home page where they will be properly prompted
+        if (!this.state.loggedIn) {
+            window.location.href = '/';
+            return null; // Render nothing, as the page will be redirected
+          }
     return (
       <div class = "container">
 
@@ -111,14 +115,20 @@ testTopTracks(T_range){
                 <ul>
                     <li><Link to="/ArtistsPage">Top Artists</Link></li>
                     <li><Link to="/SongsPage">Top Songs</Link></li>
+                    <li><Link to="/RecentPage">Recently Played</Link></li>
+
                 </ul>
             </nav>
         </div>
     </div>
 
     <div class="container-wrapper">
-
-        {this.state.loggedIn ? (
+        <div className='square-box'>
+          <h3 class="header-title"><b>Welcome to SpotiStat</b></h3>
+          <h4 class= "sub-header"><b>What Would You Like To View Today?</b></h4>
+          <SearchOptions />
+          </div>
+        {/* {this.state.loggedIn ? (
             //if they are logged in
           <div className='square-box'>
           <h3 class="header-title"><b>Welcome to SpotiStat</b></h3>
@@ -134,7 +144,7 @@ testTopTracks(T_range){
             <LoginPrompt />
             </div>
           </div>
-        )}
+        )} */}
     </div>
 
     <h3 class="header-title"><b>What Do We Offer at SpotiStat?</b></h3>

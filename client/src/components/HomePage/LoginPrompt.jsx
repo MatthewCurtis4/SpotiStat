@@ -1,8 +1,9 @@
 import React from 'react';
-import data from "../data";
 import {BsArrowRightCircle} from "react-icons/bs";
 import "./Features.css";
 import { Link } from 'react-router-dom';
+const login = process.env.REACT_APP_PORT_BE || 'http://localhost:8888/login';
+
 
 const LoginPrompt = () => {
   return (
@@ -16,9 +17,7 @@ const LoginPrompt = () => {
                     {
                     <div className='option '>
                     <h4>{"Click Here To Login"}</h4>
-                    <Link to="/" className='item-link text-grey'>
-                        <BsArrowRightCircle size={30} />
-                    </Link>
+                    <a className='item-link text-grey' href={login} > <BsArrowRightCircle size={30} /> </a>
                 </div> 
 
                     }

@@ -63,7 +63,7 @@ testTopArtists(T_range){
   render() {
         //if they are no longer logged in, redirect them to the home page where they will be properly prompted
         if (!this.state.loggedIn) {
-          window.location.href = '/InfoPage';
+          window.location.href = '/';
           return null; // Render nothing, as the page will be redirected
         }
     return (
@@ -80,6 +80,8 @@ testTopArtists(T_range){
                             <ul>
                                 <li><Link to="/ArtistsPage">Top Artists</Link></li>
                                 <li><Link to="/SongsPage">Top Songs</Link></li>
+                                <li><Link to="/RecentPage">Recently Played</Link></li>
+
                             </ul>
                         </nav>
                     </div>
