@@ -17,10 +17,9 @@ const SearchOptions = () => {
                     {
                         data.typesOfSearchs.map(functionOption => {
                             return (
-                                <div className='option '>
+                                <div className='option'>
+                                <Link to={functionOption.location} className='item-link'>
                                 <h4>{functionOption.title}</h4>
-                                <Link to={functionOption.location} className='item-link text-grey'>
-                                Click
                                 </Link>
                             </div> 
                             )

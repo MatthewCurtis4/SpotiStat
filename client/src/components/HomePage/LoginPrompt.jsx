@@ -16,8 +16,7 @@ const LoginPrompt = () => {
                 <div className='vert-list'>
                     {
                     <div className='option '>
-                    <h4>{"Click Here To Login"}</h4>
-                    <a className='item-link text-grey' href={login} > Click </a>
+                    <a className='item-link text-grey' href={login} > <h4>{"Login to Spotify"}</h4> </a>
                 </div> 
                 // <FontAwesomeIcon icon={faArrowRight} size="2x"/>
                     }
